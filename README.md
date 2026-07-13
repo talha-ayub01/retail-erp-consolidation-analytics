@@ -38,3 +38,22 @@ Because each business stores and manages data differently, leadership faces seve
 
 The organization needs a centralized data and analytics platform that can integrate different source systems, standardize business data, automate reporting, and provide reliable insights through Power BI.
 
+## Project Objectives
+
+The main objective of this project is to build a scalable and reusable data platform that can support both existing retail businesses and future acquisitions.
+
+The platform is designed to:
+
+* Integrate data from ERP, POS, inventory, finance, procurement, vendor, employee, API, and file-based systems.
+* Standardize inconsistent data structures across multiple businesses and branches.
+* Build reusable ingestion and transformation frameworks for faster onboarding of newly acquired businesses.
+* Implement Bronze, Silver, and Gold data layers using Medallion Architecture.
+* Improve data quality through validation, deduplication, standardization, and reconciliation rules.
+* Create trusted fact and dimension tables for business reporting.
+* Deliver semantic models and Power BI dashboards for executive and operational analytics.
+* Provide a unified view of sales, inventory, vendors, margins, branch performance, and business profitability.
+* Reduce manual reporting and dependency on Excel-based consolidation.
+* Improve visibility into fraud, inventory shrinkage, margin leakage, and operational inefficiencies.
+* Support faster, more consistent, and data-driven decision-making across the organization.
+
+
