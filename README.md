@@ -260,6 +260,89 @@ The project uses a modern cloud-based data engineering and analytics stack to su
 * Python Modules
 * Documentation as Code
 
+## Medallion Architecture
+
+The platform uses Medallion Architecture to separate raw data, standardized business data, and reporting-ready datasets into clearly defined layers.
+
+### Bronze Layer
+
+The Bronze layer stores raw data exactly as received from the source systems.
+
+Typical Bronze datasets include:
+
+* Raw ERP sales transactions
+* Raw POS transactions
+* Raw inventory records
+* Raw vendor and procurement data
+* Raw finance data
+* Raw employee and branch data
+* API responses
+* CSV and Excel file extracts
+
+Each record includes technical metadata such as:
+
+* Source system
+* Business entity
+* Ingestion timestamp
+* Batch identifier
+* Source file name
+* Processing status
+
+### Silver Layer
+
+The Silver layer contains cleaned, validated, deduplicated, and standardized business data.
+
+Typical Silver entities include:
+
+* Standardized products
+* Standardized stores and branches
+* Unified vendor records
+* Validated sales transactions
+* Clean inventory movements
+* Employee master data
+* Customer records
+* Finance and procurement transactions
+
+Main Silver-layer transformations include:
+
+* Schema standardization
+* Data type conversion
+* Duplicate removal
+* Missing-value handling
+* Product and vendor mapping
+* Business rule validation
+* Record reconciliation
+* Invalid-record quarantine
+
+### Gold Layer
+
+The Gold layer contains business-ready datasets designed for reporting, analytics, and decision-making.
+
+Typical Gold tables include:
+
+* FactSales
+* FactInventory
+* FactPurchasing
+* FactEmployeePerformance
+* DimProduct
+* DimStore
+* DimVendor
+* DimCustomer
+* DimEmployee
+* DimDate
+
+The Gold layer also provides aggregated datasets and KPIs for:
+
+* Sales performance
+* Branch profitability
+* Inventory shrinkage
+* Product performance
+* Vendor comparison
+* Gross margin
+* Employee productivity
+* Executive reporting
+
+Power BI and Microsoft Fabric semantic models use the Gold layer as the trusted source for business analytics.
 
 
 
