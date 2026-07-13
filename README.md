@@ -20,3 +20,21 @@ The data is organized using Medallion Architecture:
 Power BI connects to the curated Gold-layer data and semantic models to provide interactive dashboards for sales analysis, branch performance, inventory monitoring, vendor comparison, profitability, and executive KPI tracking.
 
 The platform helps organizations onboard newly acquired businesses faster, compare performance across branches, identify operational issues, improve vendor and inventory decisions, reduce manual reporting, and make faster data-driven decisions.
+
+## Business Problem
+
+The organization regularly acquires grocery stores, bakeries, and retail businesses that use different ERP, POS, inventory, finance, and operational systems.
+
+Because each business stores and manages data differently, leadership faces several challenges:
+
+* Sales, inventory, vendor, and financial data is spread across multiple systems.
+* Product, branch, customer, and supplier records follow inconsistent formats.
+* Reporting depends heavily on Excel files and manual consolidation.
+* Newly acquired businesses take too long to onboard into the reporting environment.
+* Leadership cannot easily compare performance across branches and business entities.
+* Inventory shrinkage, fraud, margin leakage, and operational inefficiencies are difficult to identify.
+* Vendor pricing and purchasing decisions cannot be evaluated using consolidated data.
+* Business users do not have a single trusted platform for analytics and reporting.
+
+The organization needs a centralized data and analytics platform that can integrate different source systems, standardize business data, automate reporting, and provide reliable insights through Power BI.
+
