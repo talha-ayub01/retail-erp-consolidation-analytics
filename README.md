@@ -171,7 +171,35 @@ The solution includes monitoring, validation, and governance controls to support
 * Auditability
 * Reliable production support
 
-<img width="660" height="222" alt="image" src="https://github.com/user-attachments/assets/93950910-38d6-4804-b828-6619785bf982" />
+## Architecture Flow
+
+```mermaid
+flowchart LR
+    A[ERP Systems] --> H[Azure Data Factory]
+    B[POS Systems] --> H
+    C[Inventory Systems] --> H
+    D[Finance Systems] --> H
+    E[Vendor Systems] --> H
+    F[REST APIs] --> H
+    G[CSV and Excel Files] --> H
+
+    H --> I[ADLS Gen2 Raw Storage]
+    I --> J[Bronze Layer]
+    J --> K[Databricks and PySpark Processing]
+    K --> L[Silver Layer]
+    L --> M[Gold Layer]
+    M --> N[Microsoft Fabric Warehouse]
+    N --> O[Semantic Models]
+    O --> P[Power BI Business Analytics]
+
+    P --> Q[Executive Leadership]
+    P --> R[Finance Teams]
+    P --> S[Operations Teams]
+    P --> T[Procurement Teams]
+    P --> U[Branch Managers]
+
+
+
 
 
 
