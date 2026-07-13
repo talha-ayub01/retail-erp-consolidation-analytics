@@ -56,4 +56,122 @@ The platform is designed to:
 * Improve visibility into fraud, inventory shrinkage, margin leakage, and operational inefficiencies.
 * Support faster, more consistent, and data-driven decision-making across the organization.
 
+## Solution Architecture
+
+The platform follows a modern lakehouse architecture designed to support scalable ingestion, reliable transformation, governed data modeling, and business analytics.
+
+### 1. Source Systems
+
+Data is collected from multiple business systems, including:
+
+* ERP systems
+* Point-of-sale systems
+* Inventory management systems
+* Finance and accounting databases
+* Vendor and procurement systems
+* Employee and workforce systems
+* REST APIs
+* CSV and Excel files
+
+### 2. Data Ingestion
+
+Azure Data Factory is used to orchestrate data ingestion from databases, APIs, and file-based sources.
+
+The ingestion framework supports:
+
+* Full loads
+* Incremental loads
+* Parameterized pipelines
+* Reusable source configurations
+* Error handling and retries
+* Pipeline logging and monitoring
+
+### 3. Raw Data Storage
+
+Azure Data Lake Storage Gen2 stores the raw data received from each source system.
+
+The raw layer preserves:
+
+* Original source structure
+* Source system name
+* Business entity identifier
+* Ingestion timestamp
+* File or batch identifier
+* Processing status
+
+### 4. Data Processing
+
+Azure Databricks, PySpark, SQL, and Delta Lake are used to clean, validate, transform, and standardize the data.
+
+The processing layer handles:
+
+* Schema standardization
+* Data type conversion
+* Deduplication
+* Missing-value handling
+* Business rule validation
+* Product and vendor mapping
+* Incremental processing
+* Data quality checks
+
+### 5. Medallion Architecture
+
+The data is organized into three main layers:
+
+**Bronze Layer**
+
+Stores raw data from ERP, POS, inventory, finance, vendor, and file-based systems with ingestion metadata.
+
+**Silver Layer**
+
+Contains cleaned, validated, deduplicated, and standardized business entities such as products, stores, vendors, customers, employees, sales, and inventory.
+
+**Gold Layer**
+
+Contains business-ready fact tables, dimensions, KPIs, aggregates, and reporting datasets for analytics consumption.
+
+### 6. Data Warehouse and Semantic Layer
+
+Curated Gold-layer data is published to Microsoft Fabric Warehouse.
+
+Business-ready semantic models provide standardized measures and relationships for:
+
+* Sales performance
+* Branch profitability
+* Inventory movement
+* Vendor performance
+* Gross margin analysis
+* Employee productivity
+* Executive KPIs
+
+### 7. Business Analytics
+
+Power BI is used as the business analytics and visualization layer.
+
+Dashboards provide insights into:
+
+* Sales trends
+* Store and branch comparisons
+* Inventory shrinkage
+* Vendor pricing
+* Product performance
+* Profitability
+* Operational inefficiencies
+* Acquisition onboarding progress
+
+### 8. Monitoring and Governance
+
+The solution includes monitoring, validation, and governance controls to support:
+
+* Pipeline failure tracking
+* Data quality reporting
+* Processing logs
+* Access control
+* Data lineage
+* Auditability
+* Reliable production support
+
+<img width="660" height="222" alt="image" src="https://github.com/user-attachments/assets/93950910-38d6-4804-b828-6619785bf982" />
+
+
 
